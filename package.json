@@ -1,0 +1,25 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IzzyBrassell/employee-tracker.git"
+  },
+  "author": "Izzy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IzzyBrassell/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/IzzyBrassell/employee-tracker#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.1.2",
+    "sequelize": "^6.29.0"
+  }
+}

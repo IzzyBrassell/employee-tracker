@@ -1,7 +1,10 @@
 const inquirer = require('inquirer');
 const express = require('express');
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('mysql://root:password@127.0.0.1:3306/employees_db')
+require('dotenv').config
+const sequelize = new Sequelize(process.env.MYSQL_LOGIN)
+
+const app = express()
 
 const Employee = sequelize.define('employee', {
     name: Sequelize.STRING,

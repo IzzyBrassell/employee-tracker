@@ -28,14 +28,20 @@ const Employee = sequelize.define('employee', {
       type: Sequelize.FLOAT,
       allowNull: false,
     },
-    Manager: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
     isManager: {
         type: Sequelize.BOOLEAN,
-        defaultValue: false
-    }
+        defaultValue: false,
+      },
+      ManagerId: {
+        type: DataTypes.UUID,
+        allowNull: true,
+        references: {
+          model: 'employee',
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+    },
   });
   
   

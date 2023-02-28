@@ -1,11 +1,12 @@
 const { Sequelize } = require('sequelize');
-const sequelize = require('./config/connection');
+const sequelize = require('../config/connection');
 require('dotenv').config();
 const { Employee } = require('../models/employees')
 
+
 const { v4: uuidv4 } = require('uuid');
 
-const managers = [
+const newManagers = [
     {
         id: uuidv4(),
         name: 'Anita Mann',
@@ -47,31 +48,31 @@ const starterEmployees = [
         title: 'Secretary',
         department: 'Service',
         salary: 50000,
-        ManagerId: createdManagers[0].id
+        ManagerId: newManagers[0].id
     },
     {
         name: 'Betty Humpter',
         title: 'Engineer',
         department: 'Engineering',
         salary: 82000,
-        ManagerId: createdManagers[2].id
+        ManagerId: newManagers[2].id
     },
     {
         name: 'Kareem O. Weet',
         title: 'Salesman',
         department: 'Sales',
         salary: 75000,
-        ManagerId: createdManagers[1].id
+        ManagerId: newManagers[1].id
     },
     {
         name: 'May I. Tutchem',
         title: 'Customer Service Rep',
         department: 'Service',
         salary: 38000,
-        ManagerId: createdManagers[3].id
+        ManagerId: newManagers[3].id
     },
 ]
 
-startup = (starterEmployees, managers)
+startup = (starterEmployees, newManagers)
 
 module.exports = startup
